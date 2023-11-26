@@ -1,0 +1,35 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+.topbar{
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.sidebar{
+    width: 400px;
+    height: 100vh;
+    background-color: lightcyan;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    font-size: 30px;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar li {
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 10px;
+    color: purple;
+}
+.page-inner{
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 440px; /* Adjust based on sidebar width */
+}
+.hidden{
+    display: none;
+}
