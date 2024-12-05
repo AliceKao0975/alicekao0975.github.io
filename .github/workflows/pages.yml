@@ -23,18 +23,20 @@ jobs:
       - name: Cache NPM dependencies
         uses: actions/cache@v4
         with:
-          path: node_modules
+          path: hexo/node_modules
           key: ${{ runner.OS }}-npm-cache
           restore-keys: |
             ${{ runner.OS }}-npm-cache
       - name: Install Dependencies
+        working-directory: hexo
         run: npm install
       - name: Build
+        working-directory: hexo
         run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: hexo/public
   deploy:
     needs: build
     permissions:
